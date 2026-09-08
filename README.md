@@ -47,15 +47,23 @@ El idioma elegido se guarda en `localStorage` (`meran_lang`). Sin JS, el HTML ya
 
 ## Deploy
 
-GitHub → Cloudflare (Pages o Worker). Sin build: sube la carpeta tal cual, raíz `/`.
+GitHub → Cloudflare Worker. Sin build: los assets se suben tal cual.
+
+Todo en un comando (commit + push + redeploy):
 
 ```bash
-git add -A
-git commit -m "cambio"
-git push            # dispara el redeploy automático
+./deploy.sh
 ```
 
-Desplegado en: `https://meranservicargo.dejesuse545.workers.dev/`
+La primera vez abre el navegador para iniciar sesión en Cloudflare (`wrangler login`). Alternativa con token de API:
+
+```bash
+export CLOUDFLARE_API_TOKEN=xxxxx
+export CLOUDFLARE_ACCOUNT_ID=xxxxx
+./deploy.sh
+```
+
+Configuración en `wrangler.toml` (worker `meranservicargo`, assets en `./`, 404 propio). Desplegado en: `https://meranservicargo.dejesuse545.workers.dev/`
 
 ## Personalización
 

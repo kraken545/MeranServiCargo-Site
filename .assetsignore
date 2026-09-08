@@ -1,0 +1,10 @@
+.git/
+.gitignore
+README.md
+*.md
+docker-compose.yml
+.dockerignore
+wrangler.toml
+worker.js
+.assetsignore
+deploy.sh
