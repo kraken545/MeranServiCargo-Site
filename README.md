@@ -10,7 +10,7 @@ Nada que instalar — abre `index.html` directo en el navegador:
 open index.html
 ```
 
-Con Docker (nginx, live-preview con bind mount):
+Con Docker (nginx, sitio local con bind mount — los cambios se ven con refresh):
 
 ```bash
 docker compose up -d   # http://localhost:8080
@@ -28,7 +28,7 @@ docker compose up -d   # http://localhost:8080
 ├── robots.txt
 ├── sitemap.xml
 ├── 404.html
-├── docker-compose.yml  # preview local (nginx:alpine, puerto 8080)
+├── docker-compose.yml  # sitio local (nginx:alpine, puerto 8080)
 └── .dockerignore
 ```
 
